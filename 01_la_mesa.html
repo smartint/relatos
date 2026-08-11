@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>La mesa donde siempre quedaba una silla</title>
+<style>
+:root{--bg:#f4f1fb;--card:#fff;--ink:#292443;--muted:#716b86;--accent:#6253a5;--accent2:#ece9f8;--bad:#b74a4a;--good:#247447;--line:#ddd8eb;--gold:#e4bd58}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:linear-gradient(135deg,#f1effb,#fff8e8);color:var(--ink)}
+header{background:linear-gradient(135deg,#40366e,#7163b5);color:white;text-align:center;padding:26px 16px}
+header h1{margin:.2rem 0;font-size:clamp(1.6rem,4vw,2.45rem)}header p{margin:.35rem 0}
+main{width:min(1080px,96%);margin:18px auto 60px}#student{width:100%;padding:12px;border:1px solid var(--line);border-radius:12px;font-size:1rem;margin-bottom:12px}
+nav{display:flex;gap:8px;overflow:auto;margin:10px 0 16px;padding-bottom:4px}
+button{border:0;border-radius:11px;padding:11px 14px;background:var(--accent);color:white;font-weight:700;cursor:pointer;white-space:nowrap}
+button:disabled{opacity:.45;cursor:not-allowed}nav button.active{background:var(--gold);color:#222}
+section{display:none;background:white;border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:0 8px 26px #00000012}
+section.active{display:block}.reading{max-height:68vh;overflow:auto;font-family:Georgia,serif;line-height:1.72;padding-right:8px}
+.moraleja{background:#fff9df;border-left:5px solid var(--gold);padding:14px;border-radius:10px;margin-top:18px}
+.card{min-height:340px;border:1px solid var(--line);border-radius:15px;padding:22px;background:#fcfbff;display:flex;flex-direction:column;justify-content:center}
+.prompt{font-size:1.23rem;font-weight:700;margin-bottom:18px}.options{display:grid;gap:10px}
+.option{padding:11px;border:1px solid var(--line);border-radius:11px;display:flex;gap:8px;cursor:pointer;background:white;color:var(--ink);text-align:left}
+.option:hover{border-color:var(--accent)}.good{background:#eaf8ef!important;border-color:#8fc9a3!important}.bad{background:#fff0f0!important;border-color:#dc9a9a!important}
+select{width:100%;padding:12px;border:1px solid var(--line);border-radius:11px;font-size:1rem;background:white}
+.controls{display:flex;gap:8px;flex-wrap:wrap;justify-content:space-between;margin-top:14px}
+.progress{height:10px;background:#e8e5f1;border-radius:20px;overflow:hidden;margin:10px 0 16px}.bar{height:100%;background:linear-gradient(90deg,#8c7ac8,var(--gold));width:0}
+.feedback{margin-top:14px;font-weight:700;min-height:24px}.statgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.stat{background:#f1eef9;padding:14px;border-radius:11px;text-align:center}.stat b{display:block;font-size:1.5rem;color:var(--accent)}
+.data-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin-bottom:12px}
+.data-grid input{width:100%;padding:11px;border:1px solid var(--line);border-radius:10px}
+@media(max-width:650px){.controls button{flex:1}.card{min-height:410px}}
+@media print{nav,#student,.controls{display:none!important}section{display:block!important;box-shadow:none;margin-bottom:18px}.reading{max-height:none}}
+</style></head><body>
+<header><h1>La mesa donde siempre quedaba una silla</h1><p>Hábitos saludables · Amistad, inclusión y bienestar emocional</p></header>
+<main>
+<div class="data-grid">
+<input id="student" placeholder="Nombre o identificador del alumno/a">
+<input id="course" value="6.º de Primaria" aria-label="Curso">
+<input id="date" type="date" aria-label="Fecha">
+</div>
+<nav id="nav">
+<button class="active" data-sec="lectura">Lectura</button>
+<button data-sec="comprension">Comprensión</button>
+<button data-sec="vocabulario">Vocabulario</button>
+<button data-sec="sinonimos">Sinónimos</button>
+<button data-sec="orden">Orden alfabético</button>
+<button data-sec="contexto">En contexto</button>
+<button data-sec="resultados">Resultados</button>
+</nav>
+
+<section id="lectura" class="active">
+<h2>La mesa donde siempre quedaba una silla · Lectura</h2>
+<p><b>Extensión:</b> 2298 palabras</p>
+<div class="controls"><button onclick="window.print()">Imprimir</button><button onclick="showSection('comprension')">Ir a las actividades</button></div>
+<div class="reading"><p>El problema comenzó con una mesa vacía.</p>
+<p>Estaba al fondo del comedor escolar, junto a una ventana que daba al patio. Era una mesa como las demás: rectangular, con cuatro sillas y una pequeña marca en una esquina. Sin embargo, casi nadie se sentaba allí.</p>
+<p>El lunes, Martina llegó tarde al comedor porque había ayudado a ordenar unos materiales. Buscó sitio entre sus compañeros, pero todas las mesas parecían completas.</p>
+<p>Solo quedaba aquella.</p>
+<p>Se sentó y abrió su fiambrera.</p>
+<p>A los pocos minutos entró un alumno nuevo de sexto B. Se llamaba Darío y llevaba apenas una semana en el colegio. Miró alrededor con la bandeja entre las manos.</p>
+<p>Martina levantó la mano.</p>
+<p>—Aquí hay sitio.</p>
+<p>Darío dudó.</p>
+<p>—¿Seguro?</p>
+<p>—La mesa no ha reservado las sillas.</p>
+<p>Se sentó frente a ella.</p>
+<p>Durante unos minutos comieron en silencio.</p>
+<p>Martina intentó iniciar una conversación.</p>
+<p>—¿Te gusta el colegio?</p>
+<p>Darío se encogió de hombros.</p>
+<p>—Todavía no lo sé.</p>
+<p>—¿De dónde vienes?</p>
+<p>—De otro sitio.</p>
+<p>La respuesta fue tan breve que Martina no supo qué preguntar después.</p>
+<p>Al terminar, Darío se levantó.</p>
+<p>—Gracias.</p>
+<p>—Mañana puedes sentarte aquí otra vez.</p>
+<p>Él no respondió, pero sonrió un poco.</p>
+<p>Al día siguiente, Martina encontró a Naira y Samuel en una mesa cercana.</p>
+<p>—¿Por qué nadie se sienta en la mesa de la ventana?</p>
+<p>Samuel miró hacia allí.</p>
+<p>—Dicen que es la mesa de los que llegan tarde.</p>
+<p>—¿Quién lo dice?</p>
+<p>—No sé. Todo el mundo.</p>
+<p>—Eso no significa nada —respondió Naira.</p>
+<p>Aquel martes, Darío volvió a sentarse solo en la mesa de la ventana. Martina pensó en acompañarlo, pero sus amigos ya le habían guardado sitio.</p>
+<p>—Ven con nosotros —dijo Leo.</p>
+<p>Martina miró a Darío.</p>
+<p>—Ahora voy.</p>
+<p>Se sentó con el grupo, pero durante toda la comida siguió observando la mesa vacía alrededor del alumno nuevo.</p>
+<p>Don Álvaro notó que estaba distraída.</p>
+<p>—¿Ocurre algo?</p>
+<p>—No sé si Darío está solo porque quiere o porque nadie se acerca.</p>
+<p>—Esa es una diferencia importante.</p>
+<p>—¿Le pregunto?</p>
+<p>—Puedes hacerlo con respeto.</p>
+<p>En tutoría, don Álvaro escribió en la pizarra:</p>
+<p>«ESTAR SOLO NO ES LO MISMO QUE SENTIRSE SOLO».</p>
+<p>La clase comenzó a hablar.</p>
+<p>Bruno dijo que a veces necesitaba estar solo para descansar.</p>
+<p>Naira comentó que le gustaba leer sin que nadie la interrumpiera.</p>
+<p>Samuel reconoció que se sentía solo cuando sus amigos hablaban de algo que él no entendía.</p>
+<p>—Entonces la soledad puede elegirse o sufrirse —concluyó Martina.</p>
+<p>—Y también puede cambiar según el momento —respondió don Álvaro.</p>
+<p>La primera actividad consistía en recordar una situación en la que habían necesitado compañía y otra en la que habían preferido estar solos.</p>
+<p>Leo escribió que necesitaba compañía cuando estaba preocupado por un examen, pero prefería estar solo después de un partido.</p>
+<p>Martina escribió que le gustaba leer sola, pero no comer sola todos los días.</p>
+<p>—¿Y cómo sabemos qué necesita otra persona? —preguntó Samuel.</p>
+<p>—No podemos adivinarlo siempre —dijo don Álvaro—. Podemos observar, preguntar y respetar la respuesta.</p>
+<p>A la hora del comedor, Martina se acercó a Darío.</p>
+<p>—¿Quieres sentarte con nosotros?</p>
+<p>Darío miró la mesa del grupo. Había seis alumnos hablando a la vez.</p>
+<p>—No sé.</p>
+<p>—También podemos sentarnos aquí.</p>
+<p>—Aquí está bien.</p>
+<p>Martina se sentó frente a él.</p>
+<p>—¿Prefieres comer tranquilo?</p>
+<p>—Es que no sé de qué hablar.</p>
+<p>—Eso también me pasa a veces.</p>
+<p>Darío la miró sorprendido.</p>
+<p>—Tú hablas con todo el mundo.</p>
+<p>—Hablar mucho no significa saber siempre qué decir.</p>
+<p>Darío contó que en su colegio anterior tenía dos amigos con quienes compartía casi todo. Haberse mudado le había resultado difícil. En el nuevo centro, los grupos ya estaban formados y sentía que llegaba tarde a una película.</p>
+<p>—Todos conocen a todos —dijo—. Yo no sé quién es quién.</p>
+<p>—Podemos ayudarte con el reparto de personajes —respondió Martina.</p>
+<p>Durante los días siguientes, algunos compañeros comenzaron a sentarse en la mesa de la ventana. No todos a la vez. A veces Martina. Otras, Naira o Samuel.</p>
+<p>Leo se acercó el jueves.</p>
+<p>—¿Puedo sentarme?</p>
+<p>Darío asintió.</p>
+<p>Leo comenzó a contar una historia tan larga sobre un partido que apenas dejó hablar a nadie.</p>
+<p>Al terminar, Darío dijo:</p>
+<p>—Ahora conozco todo tu equipo, pero tú no sabes nada de mí.</p>
+<p>Leo abrió la boca.</p>
+<p>—Es verdad.</p>
+<p>—Podrías preguntar.</p>
+<p>Leo pensó unos segundos.</p>
+<p>—¿Te gusta el fútbol?</p>
+<p>—No mucho.</p>
+<p>—Esa pregunta no ha funcionado.</p>
+<p>Darío sonrió.</p>
+<p>—Me gusta dibujar.</p>
+<p>—Eso sí funciona.</p>
+<p>La clase inició un proyecto llamado «Puentes pequeños». Cada alumno debía practicar durante una semana una acción sencilla para mejorar las relaciones.</p>
+<p>Escuchar sin interrumpir.</p>
+<p>Invitar sin obligar.</p>
+<p>Preguntar cómo está alguien.</p>
+<p>Compartir una actividad.</p>
+<p>Pedir ayuda.</p>
+<p>Expresar una molestia con respeto.</p>
+<p>Dar las gracias.</p>
+<p>Don Álvaro aclaró que no se trataba de convertirse en amigo íntimo de todo el mundo.</p>
+<p>—Una convivencia saludable también incluye límites. Podemos ser respetuosos sin compartir todos nuestros gustos ni todo nuestro tiempo.</p>
+<p>Martina eligió escuchar sin preparar la respuesta.</p>
+<p>Descubrió que muchas veces, mientras otra persona hablaba, ella pensaba en qué contaría después.</p>
+<p>Naira eligió pedir ayuda. Le costaba reconocer que no entendía algunos ejercicios.</p>
+<p>Samuel decidió expresar las molestias sin guardar silencio.</p>
+<p>Leo eligió hacer preguntas.</p>
+<p>Darío, aunque pertenecía a otra clase, participó en el proyecto. Eligió aceptar una invitación al día.</p>
+<p>La primera invitación fue al club de dibujo durante el recreo.</p>
+<p>—No sabía que existía —dijo.</p>
+<p>—Lo hemos creado hoy —respondió Martina.</p>
+<p>Se reunieron cuatro alumnos bajo una zona cubierta. Cada uno dibujó un lugar donde se sentía tranquilo.</p>
+<p>Darío dibujó una azotea desde la que se veía el mar.</p>
+<p>Martina dibujó la biblioteca.</p>
+<p>Leo dibujó un campo de fútbol vacío.</p>
+<p>—¿Vacío? —preguntó Darío.</p>
+<p>—Cuando no hay partido, puedo pensar.</p>
+<p>Darío comprendió que Leo también necesitaba momentos de soledad.</p>
+<p>El miércoles surgió un problema.</p>
+<p>Bruno se sentó en la mesa de la ventana y tomó un dibujo de Darío sin pedir permiso.</p>
+<p>—Está muy bien —dijo.</p>
+<p>Darío se lo quitó de las manos.</p>
+<p>—No lo cojas.</p>
+<p>Bruno se sintió ofendido.</p>
+<p>—Solo estaba mirando.</p>
+<p>—Podías preguntar.</p>
+<p>—No hace falta ponerse así.</p>
+<p>Darío guardó el dibujo y se marchó.</p>
+<p>Bruno comentó que el alumno nuevo era demasiado sensible.</p>
+<p>Don Álvaro escuchó la conversación.</p>
+<p>—Que una intención sea buena no significa que la otra persona deba aceptar la acción.</p>
+<p>—Solo quería felicitarlo.</p>
+<p>—Podías hacerlo sin tocar su trabajo.</p>
+<p>Bruno se quedó pensando.</p>
+<p>En tutoría hablaron de los límites personales.</p>
+<p>Pedir permiso.</p>
+<p>Aceptar un «no».</p>
+<p>No compartir información privada.</p>
+<p>No insistir cuando alguien necesita espacio.</p>
+<p>—¿Y si una persona dice que no a todo? —preguntó Leo.</p>
+<p>—Podemos seguir siendo amables, pero no podemos obligarla a participar —respondió don Álvaro—. Si nos preocupa que esté sufriendo, lo contamos a una persona adulta.</p>
+<p>Bruno se disculpó con Darío.</p>
+<p>—No debía coger el dibujo.</p>
+<p>—Gracias.</p>
+<p>—¿Puedo verlo?</p>
+<p>Darío dudó y después abrió la carpeta.</p>
+<p>—Este sí.</p>
+<p>La conversación terminó mejor que la anterior.</p>
+<p>Durante el proyecto, Martina observó que Samuel estaba más callado de lo habitual.</p>
+<p>—¿Estás bien?</p>
+<p>—Sí.</p>
+<p>—¿Seguro?</p>
+<p>—No quiero hablar ahora.</p>
+<p>Martina estuvo a punto de insistir. Después recordó la regla de los límites.</p>
+<p>—Vale. Si luego quieres, estoy en la biblioteca.</p>
+<p>Dos horas después, Samuel la buscó.</p>
+<p>Había discutido con un amigo por un mensaje malinterpretado.</p>
+<p>—Pensó que me estaba burlando —explicó.</p>
+<p>—¿Lo estabas?</p>
+<p>—No. Pero escribí una frase sin explicar nada.</p>
+<p>Don Álvaro ayudó a ambos a hablar cara a cara. Descubrieron que el tono del mensaje no era claro.</p>
+<p>—La comunicación digital pierde gestos, voz y contexto —explicó—. Si un mensaje provoca un conflicto, puede ser útil hablar directamente y con calma.</p>
+<p>Samuel escribió a su amigo:</p>
+<p>«Siento que el mensaje pareciera una burla. No era mi intención. Podemos hablar».</p>
+<p>El amigo respondió y resolvieron el problema.</p>
+<p>La clase añadió otra herramienta a «Puentes pequeños»:</p>
+<p>«Cuando el mensaje empeora la conversación, cambia el medio».</p>
+<p>El viernes, la orientadora del centro, Elena, visitó la tutoría.</p>
+<p>Habló de señales que podían indicar que una persona necesitaba apoyo: aislamiento repentino, tristeza mantenida, miedo, cambios importantes o comentarios sobre no querer estar con nadie.</p>
+<p>—No somos responsables de resolver solos los problemas de otras personas —dijo—. Podemos acompañar y avisar a una persona adulta.</p>
+<p>Martina preguntó:</p>
+<p>—¿Y si alguien nos pide que guardemos un secreto?</p>
+<p>—Si el secreto implica que esa persona o alguien más puede estar en peligro, debemos contarlo. Cuidar es más importante que guardar ese tipo de secreto.</p>
+<p>La clase practicó frases para pedir ayuda:</p>
+<p>«Estoy preocupado por un compañero».</p>
+<p>«No sé cómo ayudar».</p>
+<p>«Esto me está haciendo sentir mal».</p>
+<p>«Necesito hablar con alguien».</p>
+<p>Darío escuchaba con atención.</p>
+<p>Después de la sesión se acercó a Elena.</p>
+<p>—A veces echo mucho de menos mi otro colegio.</p>
+<p>—Es normal sentir tristeza durante un cambio —respondió ella—. Podemos buscar formas de acompañarte mientras te adaptas.</p>
+<p>Acordaron que Darío tendría una persona de referencia en el centro y participaría en algunas actividades que le interesaban.</p>
+<p>No lo obligaron a estar siempre rodeado.</p>
+<p>También respetaron sus momentos tranquilos.</p>
+<p>La mesa de la ventana comenzó a cambiar.</p>
+<p>Ya no era una mesa abandonada. Algunos días se llenaba de conversaciones. Otros permanecía medio vacía.</p>
+<p>Darío seguía sentándose allí porque le gustaba la luz.</p>
+<p>Pero ya no parecía que hubiera llegado tarde a todas las películas.</p>
+<p>La clase decidió organizar una jornada llamada «Nadie tiene que entrar corriendo».</p>
+<p>El objetivo era facilitar que alumnos nuevos o que se sentían apartados pudieran conocer actividades del centro.</p>
+<p>Había clubes de lectura, dibujo, ajedrez, deporte, música y naturaleza.</p>
+<p>Cada club preparó una invitación clara:</p>
+<p>«Puedes probar».</p>
+<p>«Puedes observar primero».</p>
+<p>«Puedes irte si no te gusta».</p>
+<p>«No necesitas conocer a nadie».</p>
+<p>Martina dirigió la mesa de bienvenida.</p>
+<p>Cuando llegaba alguien, no le hacía veinte preguntas. Le explicaba las opciones y dejaba tiempo para elegir.</p>
+<p>Un alumno de quinto permaneció cerca sin hablar.</p>
+<p>—Puedes mirar —dijo Martina—. No tienes que decidir ahora.</p>
+<p>El niño se quedó observando el club de ajedrez. Diez minutos después pidió jugar.</p>
+<p>Leo ayudó en el club de deporte. Había preparado juegos en los que nadie quedaba eliminado.</p>
+<p>—Si alguien pierde, sigue jugando —explicó.</p>
+<p>Bruno dirigía una mesa de materiales.</p>
+<p>Antes de tocar los dibujos de otros, preguntaba.</p>
+<p>—Estoy mejorando —dijo.</p>
+<p>Darío presentó una pequeña exposición de ilustraciones sobre lugares tranquilos.</p>
+<p>Una de ellas mostraba la mesa de la ventana.</p>
+<p>En el primer dibujo estaba vacía.</p>
+<p>En el segundo aparecían dos personas.</p>
+<p>En el tercero había varias, pero también una silla libre.</p>
+<p>—¿Por qué dejas una silla vacía? —preguntó Naira.</p>
+<p>—Porque siempre puede llegar alguien. O porque alguien puede necesitar espacio.</p>
+<p>Don Álvaro colocó el dibujo en el pasillo.</p>
+<p>Debajo escribió:</p>
+<p>«Invitar no es ocupar todas las sillas».</p>
+<p>Durante la jornada, las familias participaron en un taller sobre escucha.</p>
+<p>En parejas, una persona hablaba durante un minuto y la otra solo escuchaba.</p>
+<p>A muchos adultos les resultó difícil no interrumpir.</p>
+<p>La madre de Martina se rio.</p>
+<p>—Ahora entiendo por qué me dices que nunca termino una historia.</p>
+<p>—Yo también te interrumpo —admitió Martina.</p>
+<p>Acordaron practicar una conversación sin teléfonos durante la cena.</p>
+<p>La familia de Leo decidió preguntar antes de dar consejos.</p>
+<p>—A veces alguien solo quiere que lo escuchen —dijo su padre.</p>
+<p>Un mes después, don Álvaro revisó los compromisos.</p>
+<p>Martina escuchaba mejor, aunque todavía preparaba respuestas en su cabeza.</p>
+<p>Leo hacía más preguntas.</p>
+<p>Naira pedía ayuda con menos vergüenza.</p>
+<p>Samuel expresaba antes las molestias.</p>
+<p>Darío aceptaba algunas invitaciones y también decía que no cuando necesitaba estar solo.</p>
+<p>—¿Ya no te sientes solo? —preguntó Martina.</p>
+<p>Darío pensó.</p>
+<p>—Algunos días sí.</p>
+<p>—¿Entonces el proyecto no funcionó?</p>
+<p>—Sí funcionó. Ahora sé a quién decírselo.</p>
+<p>La respuesta quedó escrita en el mural.</p>
+<p>La prueba final llegó cuando una alumna nueva, Salma, se incorporó a mitad de trimestre.</p>
+<p>Durante el primer recreo se quedó cerca de una pared, mirando a los grupos.</p>
+<p>Martina sintió el impulso de llevarla inmediatamente a todas las actividades.</p>
+<p>Después recordó a Darío.</p>
+<p>Se acercó despacio.</p>
+<p>—Hola. Soy Martina.</p>
+<p>—Hola.</p>
+<p>—Hay varios lugares donde puedes estar. También puedes quedarte aquí si prefieres mirar.</p>
+<p>Salma preguntó por la biblioteca.</p>
+<p>Martina la acompañó.</p>
+<p>Allí encontraron a Darío dibujando.</p>
+<p>—Esta es Salma —dijo Martina—. Busca un lugar tranquilo.</p>
+<p>Darío señaló una silla.</p>
+<p>—Aquí hay sitio.</p>
+<p>No hicieron preguntas sobre su vida.</p>
+<p>No exigieron que hablara.</p>
+<p>Compartieron la mesa.</p>
+<p>Al cabo de unos minutos, Salma tomó un lápiz y comenzó a dibujar.</p>
+<p>Martina salió de la biblioteca y miró por la ventana.</p>
+<p>En el comedor, la mesa del fondo seguía allí.</p>
+<p>Una silla estaba vacía.</p>
+<p>No parecía una ausencia triste.</p>
+<p>Parecía una posibilidad.</p>
+<p>Antes de cerrar el proyecto, Elena propuso una última reflexión. Cada grupo recibió una situación distinta: un compañero que llevaba varios días apartado, una amiga que pedía estar sola, un alumno que recibía burlas en un chat y una niña que no quería contar por qué estaba triste. Debían decidir qué podían hacer y qué debía comunicar una persona adulta.</p>
+<p>La clase comprendió que acompañar no era investigar la vida ajena ni prometer secretos imposibles. Podían escuchar, ofrecer compañía, guardar respeto y pedir ayuda cuando hubiera riesgo, miedo o sufrimiento mantenido.</p>
+<p>También aprendieron a distinguir una invitación de una presión. «¿Quieres venir?» dejaba espacio para responder. «Tienes que venir porque estás solo» convertía la ayuda en una obligación. Darío explicó que las invitaciones le habían servido cuando podía aceptarlas a su ritmo.</p>
+<p>Elena recordó que nadie tenía que convertirse en orientador de sus amigos. La amistad podía sostener, pero algunos problemas necesitaban a la familia, al profesorado o a profesionales. Pedir esa ayuda no traicionaba a nadie.</p>
+<p>La clase añadió una última frase al mural: «Acompañar también es saber cuándo buscar más apoyo».</p>
+<p>Habían aprendido que cuidar el bienestar emocional no consistía en llenar cada silencio ni en obligar a nadie a participar.</p>
+<p>Consistía en observar, invitar, escuchar, respetar los límites y saber cuándo pedir ayuda.</p>
+<p>A veces, el gesto más saludable era acercar una silla.</p>
+<p>Otras, dejar espacio.</p>
+<p>Y muchas veces, simplemente decir:</p>
+<p>«Aquí hay sitio».</p><div class="moraleja"><b>Moraleja:</b> Cuidar el bienestar emocional implica observar, escuchar, invitar sin obligar, respetar los límites y pedir ayuda cuando algo preocupa. A veces acompañar significa acercar una silla; otras, dejar el espacio que alguien necesita.</div>
+</div></section>
+
+<section id="comprension"></section>
+<section id="vocabulario"></section>
+<section id="sinonimos"></section>
+<section id="orden"></section>
+<section id="contexto"></section>
+<section id="resultados">
+<h2>Resultados</h2><div id="summary"></div>
+<div class="controls"><button id="exportHtml">Exportar resultados HTML</button><button id="reset">Reiniciar</button></div>
+</section>
+</main>
+
+<script>
+"use strict";
+const DATA={"questions": [{"q": "¿Por qué Martina se sentó en la mesa de la ventana?", "opts": ["Porque no encontró sitio en las otras mesas.", "Porque siempre comía sola.", "Porque Darío se lo pidió.", "Porque la mesa estaba reservada."], "a": 0}, {"q": "¿Qué diferencia explicó don Álvaro?", "opts": ["Estar solo no es lo mismo que sentirse solo.", "Todas las personas solas están tristes.", "La soledad siempre es elegida.", "Comer solo es perjudicial."], "a": 0}, {"q": "¿Qué sentía Darío al llegar al colegio?", "opts": ["Que los grupos ya estaban formados y él llegaba tarde.", "Que conocía a demasiadas personas.", "Que prefería no hablar nunca.", "Que quería cambiar de clase."], "a": 0}, {"q": "¿Qué aprendió Leo al hablar con Darío?", "opts": ["Que debía hacer preguntas y escuchar respuestas.", "Que todos disfrutan del fútbol.", "Que hablar mucho resuelve cualquier problema.", "Que Darío no quería amigos."], "a": 0}, {"q": "¿Qué hizo mal Bruno?", "opts": ["Tomó un dibujo sin pedir permiso.", "Se negó a sentarse con Darío.", "Se burló de su antiguo colegio.", "Contó un secreto."], "a": 0}, {"q": "¿Qué regla aprendieron sobre los límites?", "opts": ["Pedir permiso y aceptar un «no».", "Insistir hasta que alguien participe.", "Compartir siempre la información.", "No hablar con personas nuevas."], "a": 0}, {"q": "¿Por qué Samuel cambió el medio de comunicación?", "opts": ["Porque un mensaje escrito había provocado un malentendido.", "Porque perdió el teléfono.", "Porque no quería disculparse.", "Porque el amigo vivía lejos."], "a": 0}, {"q": "¿Qué explicó Elena sobre los secretos?", "opts": ["Si alguien puede estar en peligro, hay que contarlo a una persona adulta.", "Todos los secretos deben guardarse.", "Nunca se debe pedir ayuda.", "Solo las familias pueden escuchar."], "a": 0}, {"q": "¿Qué significaba la silla libre en el dibujo de Darío?", "opts": ["Que podía llegar alguien o que alguien podía necesitar espacio.", "Que nadie quería sentarse.", "Que faltaba una persona concreta.", "Que la mesa estaba rota."], "a": 0}, {"q": "¿Cuál fue el aprendizaje principal?", "opts": ["Invitar, escuchar, respetar límites y pedir ayuda cuida el bienestar emocional.", "Todas las personas deben estar siempre acompañadas.", "La amistad se consigue haciendo muchas preguntas.", "Estar solo siempre es un problema."], "a": 0}], "defs": [["Bienestar", "Estado de equilibrio físico, emocional y social."], ["Empatía", "Capacidad de comprender cómo puede sentirse otra persona."], ["Límite", "Condición que protege el espacio, las decisiones o la intimidad de alguien."], ["Aislamiento", "Situación en la que una persona queda separada de otras."], ["Escucha", "Atención que se presta a lo que otra persona comunica."], ["Convivencia", "Forma en que las personas comparten espacios y relaciones."], ["Intimidad", "Parte privada de la vida, pensamientos o sentimientos de una persona."], ["Apoyo", "Ayuda emocional o práctica que se ofrece a alguien."], ["Inclusión", "Acción de facilitar que todas las personas puedan participar."], ["Comunicación", "Intercambio de información, ideas o sentimientos."]], "vocab": [{"prompt": "Estado de equilibrio físico, emocional y social.", "answer": "Bienestar", "options": ["Bienestar", "Límite", "Escucha", "Intimidad"]}, {"prompt": "Capacidad de comprender cómo puede sentirse otra persona.", "answer": "Empatía", "options": ["Empatía", "Aislamiento", "Convivencia", "Apoyo"]}, {"prompt": "Condición que protege el espacio, las decisiones o la intimidad de alguien.", "answer": "Límite", "options": ["Límite", "Escucha", "Intimidad", "Inclusión"]}, {"prompt": "Situación en la que una persona queda separada de otras.", "answer": "Aislamiento", "options": ["Aislamiento", "Convivencia", "Apoyo", "Comunicación"]}, {"prompt": "Atención que se presta a lo que otra persona comunica.", "answer": "Escucha", "options": ["Escucha", "Intimidad", "Inclusión", "Bienestar"]}, {"prompt": "Forma en que las personas comparten espacios y relaciones.", "answer": "Convivencia", "options": ["Convivencia", "Apoyo", "Comunicación", "Empatía"]}, {"prompt": "Parte privada de la vida, pensamientos o sentimientos de una persona.", "answer": "Intimidad", "options": ["Intimidad", "Inclusión", "Bienestar", "Límite"]}, {"prompt": "Ayuda emocional o práctica que se ofrece a alguien.", "answer": "Apoyo", "options": ["Apoyo", "Comunicación", "Empatía", "Aislamiento"]}, {"prompt": "Acción de facilitar que todas las personas puedan participar.", "answer": "Inclusión", "options": ["Inclusión", "Bienestar", "Límite", "Escucha"]}, {"prompt": "Intercambio de información, ideas o sentimientos.", "answer": "Comunicación", "options": ["Comunicación", "Empatía", "Aislamiento", "Convivencia"]}], "syns": [["Acompañar", "apoyar"], ["Amable", "cordial"], ["Ayudar", "colaborar"], ["Comprender", "entender"], ["Hablar", "conversar"], ["Invitar", "proponer"], ["Respetar", "considerar"], ["Solo", "aislado"], ["Tranquilo", "sereno"], ["Unir", "conectar"]], "alpha": ["aislamiento", "apoyo", "bienestar", "comunicación", "convivencia", "empatía", "escucha", "inclusión", "intimidad", "límite"], "alphaQuiz": [{"options": ["aislamiento", "apoyo", "bienestar", "comunicación"], "answer": "aislamiento"}, {"options": ["apoyo", "bienestar", "comunicación", "convivencia"], "answer": "apoyo"}, {"options": ["bienestar", "comunicación", "convivencia", "empatía"], "answer": "bienestar"}, {"options": ["comunicación", "convivencia", "empatía", "escucha"], "answer": "comunicación"}, {"options": ["convivencia", "empatía", "escucha", "inclusión"], "answer": "convivencia"}, {"options": ["empatía", "escucha", "inclusión", "intimidad"], "answer": "empatía"}, {"options": ["escucha", "inclusión", "intimidad", "límite"], "answer": "escucha"}, {"options": ["aislamiento", "apoyo", "bienestar", "comunicación"], "answer": "aislamiento"}, {"options": ["aislamiento", "apoyo", "bienestar", "comunicación"], "answer": "aislamiento"}, {"options": ["aislamiento", "apoyo", "bienestar", "comunicación"], "answer": "aislamiento"}], "context": [["Martina decidió ___ a Darío.", "apoyar", ["apoyar", "ignorar", "empujar", "ocultar"]], ["Su forma de hablar era ___.", "cordial", ["cordial", "agresiva", "ruidosa", "fría"]], ["La clase quiso ___ con el alumno nuevo.", "colaborar", ["colaborar", "competir", "discutir", "huir"]], ["Leo empezó a ___ mejor a Darío.", "entender", ["entender", "olvidar", "juzgar", "evitar"]], ["Samuel prefirió ___ cara a cara.", "conversar", ["conversar", "gritar", "callar", "esconderse"]], ["Martina pudo ___ una actividad.", "proponer", ["proponer", "prohibir", "romper", "cancelar"]], ["Era necesario ___ los límites.", "considerar", ["considerar", "invadir", "borrar", "ignorar"]], ["Darío se había sentido ___.", "aislado", ["aislado", "acompañado", "famoso", "divertido"]], ["La biblioteca era un lugar ___.", "sereno", ["sereno", "ruidoso", "peligroso", "agitado"]], ["Los pequeños gestos podían ___ a las personas.", "conectar", ["conectar", "separar", "esconder", "confundir"]]]};
+const shuffle=a=>a.map(v=>[Math.random(),v]).sort((a,b)=>a[0]-b[0]).map(x=>x[1]);
+const state=JSON.parse(localStorage.getItem("salud_relato16_campanas")||"null")||{
+ comp:{i:0,h:0,e:0,answers:[]}, vocab:{i:0,h:0,e:0}, syn:{i:0,h:0,e:0}, orden:{i:0,h:0,e:0}, ctx:{i:0,h:0,e:0}
+};
+function save(){localStorage.setItem("salud_relato16_campanas",JSON.stringify(state));renderResults()}
+function showSection(id){document.querySelectorAll("section").forEach(s=>s.classList.toggle("active",s.id===id));document.querySelectorAll("nav button").forEach(b=>b.classList.toggle("active",b.dataset.sec===id));scrollTo(0,0);if(id==="resultados")renderResults()}
+document.querySelectorAll("nav button").forEach(b=>b.onclick=()=>showSection(b.dataset.sec));
+date.value=new Date().toISOString().slice(0,10);
+
+function makeCard(title,prompt,options,progress,index,total,onChoose,feedback=""){
+ return `<h2>${title}</h2><div class="progress"><div class="bar" style="width:${Math.round(index/total*100)}%"></div></div>
+ <div class="card"><div class="prompt">${prompt}</div><div class="options">${options.map(o=>`<button class="option">${o}</button>`).join("")}</div>
+ <div class="feedback">${feedback}</div></div>`;
+}
+
+const compData=DATA.questions.map(x=>({...x,choices:shuffle(x.opts.map((t,j)=>({t,ok:j===x.a})))}));
+function renderComp(){
+ const sec=document.getElementById("comprension"),s=state.comp;
+ if(s.i>=compData.length){sec.innerHTML=`<h2>Comprensión</h2><div class="card"><div class="prompt">Actividad terminada</div><p>Aciertos: ${s.h} · Errores: ${s.e}</p><button onclick="showSection('vocabulario')">Continuar</button></div>`;return}
+ const x=compData[s.i];sec.innerHTML=makeCard("Comprensión",`${s.i+1}. ${x.q}`,x.choices.map(o=>o.t),s.i,compData.length);
+ sec.querySelectorAll(".option").forEach((b,i)=>b.onclick=()=>{
+  sec.querySelectorAll(".option").forEach(z=>z.disabled=true);const ok=x.choices[i].ok;b.classList.add(ok?"good":"bad");
+  if(!ok)sec.querySelectorAll(".option")[x.choices.findIndex(o=>o.ok)].classList.add("good");
+  ok?s.h++:s.e++;s.answers.push({q:x.q,a:b.textContent,ok});setTimeout(()=>{s.i++;save();renderComp()},850)
+ });
+}
+
+const vocabData=DATA.vocab.map(x=>({...x,choices:shuffle(x.options)}));
+function renderVocab(){
+ const sec=document.getElementById("vocabulario"),s=state.vocab;
+ if(s.i>=vocabData.length){sec.innerHTML=`<h2>Vocabulario</h2><div class="card"><div class="prompt">Actividad terminada</div><p>Aciertos: ${s.h} · Errores: ${s.e}</p><button onclick="showSection('sinonimos')">Continuar</button></div>`;return}
+ const x=vocabData[s.i];sec.innerHTML=makeCard("Vocabulario",`¿Qué palabra corresponde a esta definición?<br><br>“${x.prompt}”`,x.choices,s.i,vocabData.length);
+ sec.querySelectorAll(".option").forEach(b=>b.onclick=()=>{sec.querySelectorAll(".option").forEach(z=>z.disabled=true);const ok=b.textContent===x.answer;b.classList.add(ok?"good":"bad");if(!ok)[...sec.querySelectorAll(".option")].find(z=>z.textContent===x.answer).classList.add("good");ok?s.h++:s.e++;setTimeout(()=>{s.i++;save();renderVocab()},850)})
+}
+
+const synData=DATA.syns.map((x,i)=>({word:x[0],answer:x[1],choices:shuffle([x[1],...shuffle(DATA.syns.filter((_,j)=>j!==i).map(y=>y[1])).slice(0,3)])}));
+function renderSyn(){
+ const sec=document.getElementById("sinonimos"),s=state.syn;
+ if(s.i>=synData.length){sec.innerHTML=`<h2>Sinónimos</h2><div class="card"><div class="prompt">Actividad terminada</div><p>Aciertos: ${s.h} · Errores: ${s.e}</p><button onclick="showSection('orden')">Continuar</button></div>`;return}
+ const x=synData[s.i];sec.innerHTML=makeCard("Sinónimos",`Elige un sinónimo de <em>${x.word}</em>.`,x.choices,s.i,synData.length);
+ sec.querySelectorAll(".option").forEach(b=>b.onclick=()=>{sec.querySelectorAll(".option").forEach(z=>z.disabled=true);const ok=b.textContent===x.answer;b.classList.add(ok?"good":"bad");if(!ok)[...sec.querySelectorAll(".option")].find(z=>z.textContent===x.answer).classList.add("good");ok?s.h++:s.e++;setTimeout(()=>{s.i++;save();renderSyn()},850)})
+}
+
+const orderData=DATA.alphaQuiz.map(x=>({...x,choices:shuffle(x.options)}));
+function renderOrder(){
+ const sec=document.getElementById("orden"),s=state.orden;
+ if(s.i>=orderData.length){sec.innerHTML=`<h2>Orden alfabético</h2><div class="card"><div class="prompt">Actividad terminada</div><p>Aciertos: ${s.h} · Errores: ${s.e}</p><button onclick="showSection('contexto')">Continuar</button></div>`;return}
+ const x=orderData[s.i];sec.innerHTML=makeCard("Orden alfabético","¿Qué palabra aparecería primero en el diccionario?",x.choices,s.i,orderData.length);
+ sec.querySelectorAll(".option").forEach(b=>b.onclick=()=>{sec.querySelectorAll(".option").forEach(z=>z.disabled=true);const ok=b.textContent===x.answer;b.classList.add(ok?"good":"bad");if(!ok)[...sec.querySelectorAll(".option")].find(z=>z.textContent===x.answer).classList.add("good");ok?s.h++:s.e++;setTimeout(()=>{s.i++;save();renderOrder()},850)})
+}
+
+const ctxData=DATA.context.map(x=>({sentence:x[0],answer:x[1],choices:shuffle(x[2])}));
+function renderCtx(){
+ const sec=document.getElementById("contexto"),s=state.ctx;
+ if(s.i>=ctxData.length){sec.innerHTML=`<h2>Vocabulario en contexto</h2><div class="card"><div class="prompt">Actividad terminada</div><p>Aciertos: ${s.h} · Errores: ${s.e}</p><button onclick="showSection('resultados')">Ver resultados</button></div>`;return}
+ const x=ctxData[s.i];const select=`<select id="ctxsel"><option value="">Selecciona…</option>${x.choices.map(o=>`<option>${o}</option>`).join("")}</select>`;
+ sec.innerHTML=`<h2>Vocabulario en contexto</h2><div class="progress"><div class="bar" style="width:${Math.round(s.i/ctxData.length*100)}%"></div></div><div class="card"><div class="prompt">${x.sentence.replace("___",select)}</div><button id="checkctx">Comprobar</button><div class="feedback"></div></div>`;
+ checkctx.onclick=()=>{if(!ctxsel.value)return;const ok=ctxsel.value===x.answer;ok?s.h++:s.e++;sec.querySelector(".feedback").textContent=ok?"¡Correcto!":`La respuesta correcta es: ${x.answer}`;ctxsel.disabled=checkctx.disabled=true;setTimeout(()=>{s.i++;save();renderCtx()},850)}
+}
+
+function renderResults(){
+ const groups=[state.comp,state.vocab,state.syn,state.orden,state.ctx],h=groups.reduce((a,x)=>a+x.h,0),e=groups.reduce((a,x)=>a+x.e,0),pct=Math.round(h/Math.max(1,h+e)*100);
+ summary.innerHTML=`<div class="statgrid"><div class="stat"><span>Aciertos</span><b>${h}</b></div><div class="stat"><span>Errores</span><b>${e}</b></div><div class="stat"><span>Resultado</span><b>${pct}%</b></div></div>`;
+}
+exportHtml.onclick=()=>{
+ const groups=[state.comp,state.vocab,state.syn,state.orden,state.ctx],h=groups.reduce((a,x)=>a+x.h,0),e=groups.reduce((a,x)=>a+x.e,0),pct=Math.round(h/Math.max(1,h+e)*100);
+ const rows=state.comp.answers.map((x,i)=>`<tr><td>${i+1}</td><td>${x.q}</td><td>${x.a}</td><td>${x.ok?"Correcta":"Incorrecta"}</td></tr>`).join("");
+ const out=`<!doctype html><meta charset="utf-8"><style>body{font-family:Arial;max-width:900px;margin:40px auto}table{border-collapse:collapse;width:100%}td,th{border:1px solid #aaa;padding:8px}</style><h1>Resultados: La mesa donde siempre quedaba una silla</h1><p><b>Alumno:</b> ${student.value||"Sin indicar"}</p><p><b>Curso:</b> ${course.value}</p><p><b>Fecha:</b> ${date.value}</p><p><b>Aciertos:</b> ${h} · <b>Errores:</b> ${e} · <b>Porcentaje:</b> ${pct}%</p><table><tr><th>N.º</th><th>Pregunta</th><th>Respuesta</th><th>Resultado</th></tr>${rows}</table>`;
+ const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([out],{type:"text/html"}));a.download="resultados_relato_16_inclusion.html";a.click();
+};
+reset.onclick=()=>{if(confirm("¿Borrar todo el progreso?")){localStorage.removeItem("salud_relato16_campanas");location.reload()}};
+renderComp();renderVocab();renderSyn();renderOrder();renderCtx();renderResults();
+</script></body></html>
